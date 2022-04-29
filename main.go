@@ -17,11 +17,11 @@ import (
 
 var (
 	// 总连接数
-	client_num = 400000
+	client_num = 10000
 	// 网卡名称
 	network_card_name = "eth0"
 	// 每个新增的IP可分配的连接数
-	per_vip_clinet_num = 50000
+	per_vip_clinet_num = 10000
 	// 新增的IP地址池
 	vip_pool = []string{}
 	// 新增的IP地址范围
