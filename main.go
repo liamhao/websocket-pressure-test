@@ -74,11 +74,13 @@ func connect(local_vip string) {
 
 	defer ws.Close()
 
-	for {
-		if enable_send_msg {
+	if enable_send_msg {
+		for {
 			ws.WriteMessage(websocket.TextMessage, []byte(send_msg_content))
 			time.Sleep(send_msg_interval)
 		}
+	} else {
+		select {}
 	}
 }
 
